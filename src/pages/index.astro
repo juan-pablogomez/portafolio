@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+import Tecnologies from "../components/Tecnologies.astro";
+import Aboutme from "../components/Aboutme.astro";
+import Footer from "../components/Footer.astro";
+
+import GitHubIcon from "../components/icons/GitHub.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import BriefCase from "../components/icons/BriefCase.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import ProfileCheckIcon from "../components/icons/ProfileCheckIcon.astro";
+import TechIcon from "../components/icons/TechIcon.astro";
+---
+
+<Layout title="Pablo | Web Developer">
+  <main>
+    <SectionContainer class="py-20">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, I'm Pablo
+        <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/juan-pablo-gómez-988479241"
+            target="_blank"
+          >
+            <Badge>Open to Work</Badge>
+          </a>
+        </div>
+      </h1>
+      <h2 class="text-2xl text-wrap opacity-80 font-400">
+        <span class="dark:text-yellow-80 text-yellow-200">
+          <strong>+3 years of experience.</strong> <br />
+        </span>
+          <span class="text-xl">
+            I am a passionate <strong class="text-blue-400">frontend developer</strong> with a
+            strong foundation in web application
+            development and advanced skills in <strong class="text-blue-400"> graphic
+              design </strong>. My professional career has focused on
+            creating <strong class="text-blue-400"> exceptional web experiences</strong>,
+            harmoniously blending functionality with visual
+            appeal.
+            <br>
+            <span class="text-yellow-200"> <strong>I'm from Medellín, 🇨🇴.</strong></span>
+          </span>
+        </span>
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://www.linkedin.com/in/juan-pablo-gómez-988479241"
+        >
+          <LinkedinIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/juan-pablogomez">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:pablo.gomez@licania.org">
+          <MailIcon class="size-4 md:size-6" />
+          pablo.gomez@licania.org
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-3xl font-semibold flex gap-x-3 items-center text-white/80 mb-8"
+      >
+        <BriefCase class="size-7 stroke-white/80 " />
+        Work experience
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="text-3xl font-semibold flex gap-x-3 items-center text-white/80"
+      >
+        <CodeIcon class="size-7 stroke-white/80" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <h2
+        class="text-3xl font-semibold flex gap-x-3 items-center text-white/80 mb-4"
+      >
+        <ProfileCheckIcon class="size-7" /> About me
+      </h2>
+      <Aboutme />
+    </SectionContainer>
+
+    <SectionContainer id="tech">
+      <h2
+        class="text-3xl font-semibold flex gap-x-3 items-center text-white/80"
+      >
+        <TechIcon class="size-4" /> Technology Stack
+      </h2>
+      <Tecnologies />
+    </SectionContainer>
+
+    <SectionContainer>
+      <Footer />
+    </SectionContainer>
+  </main>
+</Layout>

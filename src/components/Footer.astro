@@ -1,0 +1,13 @@
+---
+import AstroIcon from "./icons/TechIcons/AstroIcon.astro"
+import TailwindIcon from "./icons/TechIcons/TailwindIcon.astro"
+
+const currentYear = new Date().getFullYear()
+---
+
+<div class="flex justify-center">
+    <strong class="text-yellow-200 mx-4"> { `${currentYear}. ` } </strong>
+    <span class="flex">
+      Developed with Astro and Tailwind CSS. <AstroIcon class="size-6 mx-4" /> <TailwindIcon class="size-6 mx-4"/> 
+    </span> 
+</div>

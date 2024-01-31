@@ -1,0 +1,114 @@
+---
+import ReactIcon from "./icons/TechIcons/ReactIcon.astro";
+import WordPressIcon from "./icons/TechIcons/WordPressIcon.astro";
+import CssIcon from "./icons/TechIcons/CssIcon.astro";
+import NodeIcon from "./icons/TechIcons/NodeIcon.astro";
+import ExpressIcon from "./icons/TechIcons/ExpressIcon.astro";
+import MySqlIcon from "./icons/TechIcons/MySqlIcon.astro";
+import SassIcon from "./icons/TechIcons/SassIcon.astro";
+import PHPIcon from "./icons/TechIcons/PHPIcon.astro";
+import WooCommerceIcon from "./icons/TechIcons/WoocommerceIcon.astro";
+import AstroIcon from "./icons/TechIcons/AstroIcon.astro";
+import TailwindIcon from "./icons/TechIcons/TailwindIcon.astro";
+import GitIcon from "./icons/TechIcons/GitIcon.astro";
+import NextIcon from "./icons/TechIcons/NextIcon.astro";
+import IllustratorIcon from "./icons/TechIcons/IllustratorIcon.astro";
+import FigmaIcon from "./icons/TechIcons/FigmaIcon.astro";
+import JSIcon from "./icons/TechIcons/JSIcon.astro";
+import jQueryIcon from "./icons/TechIcons/jQueryIcon.astro";
+import TypescriptIcon from "./icons/TechIcons/TypescriptIcon.astro";
+
+const tech = [
+  {
+    name: "Wordpress",
+    icon: WordPressIcon,
+  },
+  {
+    name: "WooCommerce",
+    icon: WooCommerceIcon,
+  },
+  {
+    name: "CSS",
+    icon: CssIcon,
+  },
+  {
+    name: "Sass CSS",
+    icon: SassIcon,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: TailwindIcon,
+  },
+  {
+    name: "JavaScript",
+    icon: JSIcon,
+  },
+  {
+    name: "JQuery",
+    icon: jQueryIcon,
+  },
+  {
+    name: "React.js",
+    icon: ReactIcon,
+  },
+  {
+    name: "Node.js",
+    icon: NodeIcon,
+  },
+  {
+    name: "Express.js",
+    icon: ExpressIcon,
+  },
+  {
+    name: "MySql",
+    icon: MySqlIcon,
+  },
+  {
+    name: "PHP",
+    icon: PHPIcon,
+  },
+  {
+    name: "Astro",
+    icon: AstroIcon,
+  },
+  {
+    name: "Git",
+    icon: GitIcon,
+  },
+  {
+    name: "Next.js",
+    icon: NextIcon,
+  },
+  {
+    name: "TypeScript",
+    icon: TypescriptIcon,
+  },
+  {
+    name: "Illustrator",
+    icon: IllustratorIcon,
+  },
+  {
+    name: "Figma",
+    icon: FigmaIcon,
+  },
+
+];
+---
+
+<section class="grid grid-cols-3 gap-4 md:grid-cols-6 justify-center mt-4">
+  {
+    tech.map((tech) => (
+      <article class="flex max-w-xs flex-col items-center space-y-2 rounded-lg border border-neutral-800 p-4 bg-[#5544]">
+        <tech.icon class="size-6" />
+        <span class="text-xs">{tech.name}</span>
+      </article>
+    ))
+  }
+</section>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
