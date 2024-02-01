@@ -77,7 +77,7 @@ const PROJECTS = [
     title: "Caracterización Cultural de Antioquia",
     description:
       'Development of the "Cultural Characterization of Antioquia" web application for the Institute of Culture and Heritage of Antioquia, ProAntioquia, and the University of Antioquia. It features a directory of cultural agents and profiles with summaries organized by subregion and municipality.',
-    link: "https://caracterizacion.culturantioquia.gov.co",
+    link: "https://rutaregiones.promotoracultural.com/",
     image: "/images/caracterizacion.png",
     tags: [TAGS.MYSQL, TAGS.EXPRESS, TAGS.NODE, TAGS.REACT, TAGS.SASS],
   },
@@ -112,7 +112,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex  gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 mb-2`}
+                class={`flex md:gap-x-2 gap-x-0 rounded-full text-xs ${tag.class} py-1 md:px-4 px-1 mb-2`}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
