@@ -76,8 +76,9 @@ const PROJECTS = [
   {
     title: "Cultural Characterization of Antioquia",
     description:
-      "Development of the Cultural Characterization of Antioquia web application for the Institute of Culture and Heritage of Antioquia, ProAntioquia, and the University of Antioquia. It features a directory of cultural agents and profiles with summaries organized by subregion and municipality.",
-    link: "https://rutaregiones.promotoracultural.com/",
+      `Fullstack development from scratch, the Cultural Characterization of Antioquia web application for the Institute of Culture and Heritage of Antioquia, ProAntioquia, and the University of Antioquia. It features a directory of cultural agents and profiles with summaries organized by subregion and municipality.` ,
+    link: "https://caracterizacion.culturantioquia.gov.co/",
+    annotation: ' - ON BETA MODE - ',
     image: "/images/caracterizacion.png",
     tags: [TAGS.MYSQL, TAGS.EXPRESS, TAGS.NODE, TAGS.REACT, TAGS.SASS],
   },
@@ -102,9 +103,12 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16 my-8">
   {
-    PROJECTS.map(({ image, title, description, link, tags }) => (
+    PROJECTS.map(({ image, title, description, link, tags, annotation }) => (
       <article>
-        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+          {title}
+          </h3>
+          { annotation ? <span class="text-xs font-semibold text-wihte-80"> {annotation} </span> <br> : null }
 
         <p class="text-lg mb-4 text-pretty">{description}</p>
 
