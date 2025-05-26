@@ -3,13 +3,14 @@ import LinkButton from "./LinkButton.astro";
 
 interface Props {
   title: string;
-  description: string;
+  company: string;
+  location?: string;
   link?: string;
   date: string;
   tasks: string[];
 }
 
-const { title, description, link, date, tasks } = Astro.props;
+const { title, company, location, link, date, tasks } = Astro.props;
 ---
 
 <div
@@ -22,13 +23,14 @@ const { title, description, link, date, tasks } = Astro.props;
 <h3 class="text-lg font-semibold text-yellow-200 mt-2">
   {title}
 </h3>
-<span class="mb-4 text-base font-normal text-pretty ">
-  <strong> {description} </strong>
+<span class="mb-4 text-base font-normal text-pretty">
+  <strong> {company} </strong>
 </span>
-<ul class="mb-4 text-base font-normal text-pretty ml-8">
-  { tasks.map((task: string) => (
-    <li class="list-disc" > { task } </li>
-  ))}
+<br />
+{location && <span class="text-gray-400 text-sm text-pretty">{location}</span>}
+<br /><br />
+<ul class="mb-4 text-sm font-sm text-pretty ml-8">
+  {tasks.map((task: string) => <li class="list-disc"> {task} </li>)}
 </ul>
 {
   link && (
